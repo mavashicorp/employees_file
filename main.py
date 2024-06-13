@@ -30,6 +30,7 @@ def main():
             #ok чувствителен к регистру
         elif choise =='4':
             find_employee_by_last_name(employees)
+            #ok
         elif choise =='5':
             print_all_employees(employees)
             #ok
@@ -38,14 +39,19 @@ def main():
             #ok
         elif choise =='7':
             find_employees_by_first_letter(employees)
+            #ok
         elif choise =='8':
             save_to_file("employees.txt", employees)
+            #ok
             break
         elif choise =='9':
             break
+            #ok
         else:
             print("Некорректный ввод. Попробуйте еще...")
             
         
+# для определения, запущен ли текущий скрипт напрямую из командной строки или
+# файл интерпретируется как модуль для импорта в другой скрипт.
 if __name__ == "__main__":
     main()

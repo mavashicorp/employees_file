@@ -38,11 +38,17 @@ def delete_employee(employees):
 # поиск сотрудника по фамилии
 def find_employee_by_last_name(employees):
     surname = input("Введите фамилию для поиска: ")
+    found = False
     for employee in employees:
         if employee.surname == surname:
             print(employee)
-            return
+            found = True
+            break
+    
+    if not found:
         print("Сотрудник не найден")
+
+      
     
         
 # функция для вывода информации обо всех сотрудниках
