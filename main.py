@@ -4,7 +4,7 @@ from employee_operations import*
 from file_operations import*
 
 def main():
-    employees = load_from_file("employees.json")
+    employees = load_from_file("employees.txt")
     while True:
         print("\n\tМеню:")
         print("\n1. Добавить сотрудника")
@@ -17,7 +17,7 @@ def main():
         print("\n8. Сохранить и выйти")
         print("\n9. Выйти без сохранения")
         
-        choise = input("Enter your choise: ")
+        choise = input("\n\tВыберите действие: ")
         
         if choise =='1':
             add_employee(employees)
@@ -34,7 +34,7 @@ def main():
         elif choise =='7':
             find_employees_by_first_letter(employees)
         elif choise =='8':
-            save_to_file("employees.json", employees)
+            save_to_file("employees.txt", employees)
             break
         elif choise =='9':
             break
@@ -42,4 +42,5 @@ def main():
             print("Некорректный ввод. Попробуйте еще...")
             
         
-main()
+if __name__ == "__main__":
+    main()
