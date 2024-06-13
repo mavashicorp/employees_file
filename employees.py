@@ -32,6 +32,7 @@ def add_employee(employees):
     position = input("Введите должность: ")
     employees.append(Employee(surname, name, age, position))
 
+
 # функция для редактирования данных сотрудника
 def edit_employee(employees):
     surname = input("Введите фамилию сотрудника для редактирования: ")
@@ -42,4 +43,33 @@ def edit_employee(employees):
             employee.position = input("Введите новую должность: ")
             print("Данные о сотрудниках обновлены")
             return
-    print("Сотрудник не найден")
+        print("Сотрудник не найден")
+
+
+# функция для удаления сотрудника
+def delete_employee(employees):
+    surname = input("Введите фамилию сотрудника для удаления: ")
+    for employee in employees:
+        if employee.surname == surname:
+            employees.remove(employee)
+            print("Сотрудник удален")
+            return
+        print("Сотрудник не найден")
+
+
+# поиск сотрудника по фамилии
+def find_employee_by_last_name(employees):
+    surname = input("Введите фамилию для поиска: ")
+    for employee in employees:
+        if employee.surname == surname:
+            print(employee)
+            return
+        print("Сотрудник не найден")
+    
+        
+# функция для вывода информации обо всех сотрудниках
+def print_all_employees(employees):
+    for employee in employees:
+        print(employee)
+
+
