@@ -6,16 +6,16 @@ from employees import Employee
 
 
 def save_to_file(filename, employees):
-    with open(filename, 'w') as file:
+    with open(filename, 'w', encoding='utf-8') as file:
         for emp in employees:
-            file.write(f"{emp.name},{emp.surname},{emp.age},{emp.position}\n")
+            file.write(f"{emp.name}, {emp.surname}, {emp.age}, {emp.position}\n")
 
 
 
 
 def load_from_file(filename):
     employees = []
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
             data = line.strip().split(',')
             if len(data) == 4:

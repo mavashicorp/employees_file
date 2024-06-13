@@ -21,10 +21,13 @@ def main():
         
         if choise =='1':
             add_employee(employees)
+            #ok
         elif choise =='2':
             edit_employee(employees)
+            #no ok
         elif choise =='3':
             delete_employee(employees)
+            #ok чувствителен к регистру
         elif choise =='4':
             find_employee_by_last_name(employees)
         elif choise =='5':
