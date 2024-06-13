@@ -20,3 +20,26 @@ class Employee:
     
     def __str__(self):
         return f"{self.surname} {self.name}, {self.age} years old, {self.position}"
+
+
+# функции для ввода данных, редактирования, удаления, поиска, вывода и сохранения\загрузки данных
+
+# функция для добавления нового сотрудника
+def add_employee(employees):
+    surname = input("Введите фамилию: ")
+    name = input("Введите имя: ")
+    age = int(input("Введите возраст: "))
+    position = input("Введите должность: ")
+    employees.append(Employee(surname, name, age, position))
+
+# функция для редактирования данных сотрудника
+def edit_employee(employees):
+    surname = input("Введите фамилию сотрудника для редактирования: ")
+    for employee in employees:
+        if employee.surname == surname:
+            employee.name = input("Введите новое имя: ")
+            employee.age = int(input("Введите новый возраст: "))
+            employee.position = input("Введите новую должность: ")
+            print("Данные о сотрудниках обновлены")
+            return
+    print("Сотрудник не найден")
