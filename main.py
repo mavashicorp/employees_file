@@ -13,7 +13,7 @@ def main():
         print("\n4. Найти сотрудника по фамилии")
         print("\n5. Показать всех сотрдников")
         print("\n6. Найти сотрудника во возрасту")
-        print("\n7. Найти сотрудника по первой букве фамилии")
+        print("\n7. Найти сотрудника по первой букве имени\фамилии")
         print("\n8. Сохранить и выйти")
         print("\n9. Выйти без сохранения")
         
@@ -32,8 +32,10 @@ def main():
             find_employee_by_last_name(employees)
         elif choise =='5':
             print_all_employees(employees)
+            #ok
         elif choise =='6':
             find_employees_by_age(employees)
+            #ok
         elif choise =='7':
             find_employees_by_first_letter(employees)
         elif choise =='8':
@@ -46,4 +48,4 @@ def main():
             
         
 if __name__ == "__main__":
-    main()
+    main()5

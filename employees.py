@@ -9,5 +9,5 @@ class Employee:
         self.position = position
     
     def __str__(self):
-        return f"{self.surname} {self.name}, {self.age} years old, {self.position}"
+        return f"{self.surname} {self.name}, {self.age} лет, {self.position}"
 

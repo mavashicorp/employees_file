@@ -63,7 +63,7 @@ def find_employees_by_age(employees):
 def find_employees_by_first_letter(employees):
     letter = input("Введите букву для поиска: ")
     for employee in employees:
-        if employee.name[0].lower() == letter.lower():
+        if employee.name[1].lower() == letter.lower():
             print(employee)
 
 
