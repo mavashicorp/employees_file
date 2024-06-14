@@ -24,7 +24,7 @@ def main():
             #ok
         elif choise =='2':
             edit_employee(employees)
-            #no ok
+            #ok
         elif choise =='3':
             delete_employee(employees)
             #ok чувствителен к регистру
