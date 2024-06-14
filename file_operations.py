@@ -8,7 +8,7 @@ from employees import Employee
 def save_to_file(filename, employees):
     with open(filename, 'w', encoding='utf-8') as file:
         for emp in employees:
-            file.write(f"{emp.name}, {emp.surname}, {emp.age}, {emp.position}\n")
+            file.write(f"{emp.surname},{emp.name},{emp.age},{emp.position}\n")
 
 
 
